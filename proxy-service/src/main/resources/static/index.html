@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Math Services</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>Factors</h1>
+    <form>
+        <label for="factn">n:</label><br>
+        <input type="text" id="factn" value="1"><br><br>
+        <input type="button" value="Calcular" onclick="calcFact()">
+    </form>
+    <div id="factres"></div>
+
+    <script>
+    function calcFact() {
+        let n = document.getElementById("factn").value;
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function() {
+            document.getElementById("factres").innerHTML = this.responseText;
+        }
+        xhttp.open("GET", "/proxy?cmd=factors?n=" + n);
+        xhttp.send();
+    }
+    </script>
+
+    <h1>Primes</h1>
+    <form>
+        <label for="primen">n:</label><br>
+        <input type="text" id="primen" value="1"><br><br>
+        <input type="button" value="Calcular" onclick="calcFact()">
+    </form>
+    <div id="primeres"></div>
+
+    <script>
+    function calcFact() {
+        let n = document.getElementById("primen").value;
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function() {
+            document.getElementById("primeres").innerHTML = this.responseText;
+        }
+        xhttp.open("GET", "/proxy?cmd=primes?n=" + n);
+        xhttp.send();
+    }
+    </script>
+
+</body>
+</html>
