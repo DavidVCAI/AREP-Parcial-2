@@ -92,3 +92,26 @@ Hice el front sencillo para recibir el valor y enviarlo y hacer la peticion, ya 
 
 Pero al cambiar:
 
+![alt text](image-4.png)
+
+
+
+Luego lo que hice fue hacer ssh a las 3 instancias y ejecutar los comandos basicos: 
+
+![alt text](image-5.png)
+
+Entonces instalo los paquetes, luego hago pull al repo ya con el commit hecho, compilo con maven y lo levanto con java -jar y el jar creado en la carpeta target
+
+![alt text](image-6.png)
+
+Luego de esto queda levantado el servidor para probar desde la ip publica de la instancia:
+
+![alt text](image-7.png)
+
+En las otras dos instancias hago lo mismo pero dentro de la carpeta math-service no proxy-service. 
+
+Y luego de unos arreglos ya quedaria funcionando el programa:
+
+![alt text](image-8.png)
+
+Restan algunas cosas esteticas pero quedaria funcionando.

@@ -10,13 +10,14 @@ public class MathController {
     @GetMapping("/factors")
     public String factors(@RequestParam(value = "value", defaultValue = "1") String n) {
         int value = Integer.parseInt(n);
-        String response = "{'operation':'factors', 'input':"+n+" , 'output':'";
+        String response = "{'operation':'factors', 'input':"+n+", 'output':'";
         for(int i=1; i<= value; i++){
             if ((value % i) ==0){
                 response+=i;
                 response+=",";
             }
         }
+        response = response.substring(0, response.length()-1); // quitar la ultima coma que no se necesita
         response +="'}";
         return response;
 
@@ -33,6 +34,8 @@ public class MathController {
             }
         }
         response +="'}";
+        response = response.substring(0, response.length()-1); // quitar la ultima coma que no se necesita
+
         return response;
 
     }
