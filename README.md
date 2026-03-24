@@ -115,3 +115,17 @@ Y luego de unos arreglos ya quedaria funcionando el programa:
 ![alt text](image-8.png)
 
 Restan algunas cosas esteticas pero quedaria funcionando.
+
+Los dos servidores a los que se les pega son:
+
+    String server1 = "http://52.23.206.118:8080";
+    String server2 = "http://3.93.150.133:8080";
+
+Y el servidor base es:
+
+    http://98.93.161.156:8080/
+
+
+El server falla cuando las peticiones son de numeros muy grandes.
+
+![alt text](image-9.png)

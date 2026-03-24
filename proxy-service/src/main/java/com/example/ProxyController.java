@@ -24,7 +24,7 @@ public class ProxyController {
             res = callGet(server2 + "/" + cmd);
         }
         if (res == null) {
-            return "mbos servidores caidos";
+            return "Ambos servidores sin conexion o el numero es muy grande.";
         }
         return res;
     }
