@@ -4,6 +4,8 @@
 
 En este proyecto se va a desarrollar un proxy que balanceara la carga de peticiones hacia un math service que debe cumplir con este objetivo:
 
+**Link del video funcionando:** https://drive.google.com/file/d/17vVttw-FIJM4LUrkcKSvHiruTa35PL1L/view
+
 ---
 **Factores y Primos**
 
