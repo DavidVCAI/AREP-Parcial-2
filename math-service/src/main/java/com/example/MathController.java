@@ -14,6 +14,7 @@ public class MathController {
         for(int i=1; i<= value; i++){
             if ((value % i) ==0){
                 response+=i;
+                response+=",";
             }
         }
         response +="'}";
@@ -28,6 +29,7 @@ public class MathController {
         for(int i=1; i<= value; i++){
             if (isPrime(i)){
                 response+=i;
+                response+=",";
             }
         }
         response +="'}";
