@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class MathController {
 
     @GetMapping("/factors")
-    public String factors(@RequestParam(value = "json", defaultValue = "1") String n) {
+    public String factors(@RequestParam(value = "value", defaultValue = "1") String n) {
         int value = Integer.parseInt(n);
         String response = "{'operation':'factors', 'input':"+n+" , 'output':'";
         for(int i=1; i<= value; i++){
@@ -22,7 +22,7 @@ public class MathController {
     }
 
     @GetMapping("/primes")
-    public String primes(@RequestParam(value = "json", defaultValue = "1") String n) {
+    public String primes(@RequestParam(value = "value", defaultValue = "1") String n) {
         int value = Integer.parseInt(n);
         String response = "{'operation':'primes', 'input':"+n+" , 'output':'";
         for(int i=1; i<= value; i++){

@@ -20,7 +20,7 @@
         xhttp.onload = function() {
             document.getElementById("factres").innerHTML = this.responseText;
         }
-        xhttp.open("GET", "/proxy?cmd=factors?n=" + n);
+        xhttp.open("GET", "/proxy?cmd=factors?value=" + n);
         xhttp.send();
     }
     </script>
@@ -29,18 +29,18 @@
     <form>
         <label for="primen">n:</label><br>
         <input type="text" id="primen" value="1"><br><br>
-        <input type="button" value="Calcular" onclick="calcFact()">
+        <input type="button" value="Calcular" onclick="calcPrime()">
     </form>
     <div id="primeres"></div>
 
     <script>
-    function calcFact() {
+    function calcPrime() {
         let n = document.getElementById("primen").value;
         const xhttp = new XMLHttpRequest();
         xhttp.onload = function() {
             document.getElementById("primeres").innerHTML = this.responseText;
         }
-        xhttp.open("GET", "/proxy?cmd=primes?n=" + n);
+        xhttp.open("GET", "/proxy?cmd=primes?value=" + n);
         xhttp.send();
     }
     </script>
